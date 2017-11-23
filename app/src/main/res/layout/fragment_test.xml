@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="niko.ru.mdputests.TestProfFragment">
+
+  <TextView
+    android:id="@+id/desc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:gravity="center"
+    android:text="Описание"
+    android:textColor="@android:color/black"
+    android:textSize="25sp" />
+
+  <RadioGroup
+   android:layout_above="@id/btnNext"
+    android:id="@+id/answers"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioButton
+      android:id="@+id/answerOne"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:text="-"
+      android:textColor="@android:color/black"
+      android:textSize="20sp" />
+
+    <RadioButton
+      android:id="@+id/answerTwo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:text="-"
+      android:textColor="@android:color/black"
+      android:textSize="20sp" />
+
+    <RadioButton
+      android:id="@+id/answerThree"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:text="-"
+      android:textColor="@android:color/black"
+      android:textSize="20sp" />
+
+  </RadioGroup>
+
+  <Button
+    android:id="@+id/btnNext"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:text="Далее" />
+
+
+</RelativeLayout>

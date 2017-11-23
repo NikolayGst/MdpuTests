@@ -1,0 +1,61 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="niko.ru.mdputests.ResultTestFragment">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:text="Вы успешно прошли тест!!!"
+      android:textColor="@android:color/black"
+      android:textSize="25sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="48dp"
+      android:layout_marginBottom="48dp"
+      android:gravity="center"
+      android:orientation="horizontal">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Ваш результат:"
+
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+      <TextView
+        android:id="@+id/txtCountPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/txtResultText"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="64dp"
+      android:gravity="center_horizontal"
+      android:text="...."
+      android:textColor="@android:color/black"
+      android:textSize="20sp" />
+
+  </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
