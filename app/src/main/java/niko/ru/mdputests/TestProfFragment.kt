@@ -1,4 +1,4 @@
-package niko.ru.mdputests
+чpackage niko.ru.mdputests
 
 
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.github.salomonbrys.kotson.fromJson
 import com.google.gson.Gson
+import com.vstechlab.easyfonts.EasyFonts
 import kotlinx.android.synthetic.main.fragment_test.*
 import niko.ru.mdputests.model.testProf.Result
 import niko.ru.mdputests.model.testProf.TestProf
@@ -64,6 +65,8 @@ class TestProfFragment : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setColorAndFonts()
+
         changeQuestion()
 
         btnNext.setOnClickListener {
@@ -83,12 +86,30 @@ class TestProfFragment : Fragment() {
         }
     }
 
+    private fun setColorAndFonts() {
+
+        txtTotalCount.text = (testProf.questions?.size).toString()
+
+        txtCurrent.typeface = EasyFonts.robotoLightItalic(context)
+        txt.typeface = EasyFonts.robotoLightItalic(context)
+        txtTotalCount.typeface = EasyFonts.robotoLightItalic(context)
+
+        desc.typeface = EasyFonts.robotoLightItalic(context)
+
+        answerOne.typeface = EasyFonts.robotoBoldItalic(context)
+        answerTwo.typeface = EasyFonts.robotoBoldItalic(context)
+        answerThree.typeface = EasyFonts.robotoBoldItalic(context)
+
+        btnNext.typeface = EasyFonts.robotoItalic(context)
+    }
+
     private fun changeQuestion() {
         val size = testProf.questions?.size ?: -1
         if (position >= size && size != -1) {
             onTestFinishedListener?.onTestFinished(countPoint, testProf.result)
         } else {
             val question = testProf.getQuestion(position)
+            txtCurrent.text = (position + 1).toString()
             desc.text = question.desc
             answerOne.text = question.answers?.get(0)?.text ?: ""
             answerTwo.text = question.answers?.get(1)?.text ?: ""

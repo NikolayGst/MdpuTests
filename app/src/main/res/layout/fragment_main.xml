@@ -1,14 +1,62 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context="niko.ru.mdputests.MainFragment">
 
- <Button
-   android:id="@+id/testProf"
-   android:layout_width="match_parent"
-   android:layout_gravity="center"
-   android:text="Тест на профориентацию"
-   android:layout_height="wrap_content" />
+  <ImageView
+    android:layout_width="match_parent"
+    android:src="@drawable/bg"
+    android:scaleType="centerCrop"
+    android:layout_height="match_parent" />
+  <android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_marginTop="65dp"
+    android:layout_marginBottom="64dp"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    android:layout_height="match_parent">
 
-</FrameLayout>
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_margin="16dp"
+      android:layout_height="wrap_content">
+
+      <ImageView
+        android:id="@+id/mainImage"
+        android:layout_width="wrap_content"
+        android:src="@drawable/main_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:layout_height="wrap_content" />
+
+      <TextView
+        android:id="@+id/descTextProf"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"
+        android:text="Тест на профориентацию"
+        android:textColor="@android:color/black"
+        android:layout_above="@id/testProf"
+        android:layout_height="wrap_content" />
+
+      <Button
+        android:id="@+id/testProf"
+        android:layout_width="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Начать"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:background="@drawable/btn"
+         />
+    </RelativeLayout>
+
+
+  </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
